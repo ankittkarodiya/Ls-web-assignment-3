@@ -20,8 +20,8 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('django_app.urls', namespace='django_app')),  # Include your app's URLs
-    # path('auth/', include('django_app.urls')),  # Include the URLs from django_app
+    path('', include('django_app.urls', namespace='django_app')),  
+    # path('auth/', include('django_app.urls')),
     # path('', TemplateView.as_view(template_name='django_app/home.html'), name='home'),
 ]
 

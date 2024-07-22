@@ -27,14 +27,14 @@ def login_view(request):
         if form.is_valid():
             user = form.get_user()
             login(request, user)
-            return redirect('django_app:home')  # Use the namespaced URL pattern
+            return redirect('django_app:home')  
     else:
         form = AuthenticationForm()
     return render(request, "django_app/login.html", {"form": form})
 
 def logout_view(request):
     logout(request)
-    return redirect('django_app:login')  # Ensure 'login' is the correct namespaced URL pattern
+    return redirect('django_app:login')  
 
 def profile(request):
     # return render(request, 'django_app/profile.html')
